@@ -100,10 +100,12 @@ public class Customer implements java.io.Serializable {
  
     public void saveCustomer() {
         try {
-            Date d = sdf.parse(sd);
+            //Date d = sdf.parse(sd);
+        	System.out.println(dob);
+        	Date d = dob;
             System.out.println(d);
             this.dob = d;
-        } catch (ParseException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         CustomerDao dao = new CustomerDao();
